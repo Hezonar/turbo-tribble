@@ -1,10 +1,15 @@
-n = int(input())
-m = 0
-while n > 0:
-    d = n % 10
-    if d > 1:
-        m = d + 10*m
-    print(n, d)
-    n = (n - d) // 10
-    print(n)
-print(m)
+from selenium import webdriver
+from xvfbwrapper import Xvfb
+vdisplay = Xvfb()
+vdisplay.start()
+from selenium.webdriver.chrome.options import Options
+chrome_options = Options()
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-setuid-sandbox")
+driver = webdriver.Chrome('/home/chromedriver', chrome_options=chrome_options)
+driver.get('https://google.com')
+ff = open("file.txt", "w")
+ff.write(driver.page_source.encode("utf-8"))
+ff.close()
+driver.close()
+vdisplay.stop()
