@@ -2,7 +2,7 @@ import config
 import telebot
 import random
 from telebot import types
-#import Start
+import Start
 import time
 
 bot = telebot.TeleBot(config.API_TOKEN)
@@ -12,7 +12,7 @@ bot = telebot.TeleBot(config.API_TOKEN)
 def start_script(message):
     bot.send_message(message.chat.id, "Скрипт успешно запущен")
     time.sleep(1)
-    #Start.main(1)
+    Start.main(1)
 
 
 @bot.message_handler(commands=['about'])
