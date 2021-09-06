@@ -3,9 +3,6 @@ from selenium.webdriver.chrome.options import Options
 login = "lolkekboss"  # логин от аккаунта
 password = "lolkekprikol"  # пароль от аккаунта
 
-#login = "fhnneh@mail.ru"  # логин от аккаунта
-#password = "15Vfz1978"  # пароль от аккаунта
-
 API_TOKEN = "1201025788:AAHykRX4WGZK4rEst04ipUUSWN9t4HB1ti0"  # token для телеги
 
 parse_from = "https://www.instagram.com/mikhail_litvin/"  # откуда парсить челов
